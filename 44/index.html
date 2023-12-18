@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 44</title>
+</head>
+<body>
+    <script>
+        const fructs = ['Банан', 'Арбуз', 'Яблоко', 'Виноград', 'Груша'];
+
+        const indexOfApple = fructs.indexOf('Яблоко');
+        if (indexOfApple !== -1) {
+            fructs.splice(indexOfApple, 1); // Удаление 'Яблоко' из массива
+        }
+
+        fructs.shift(); // Удаление первого элемента из массива
+        fructs.pop(); // Удаление последнего элемента из массива
+
+        console.log(fructs); // Вывод массива в консоль
+    </script>
+</body>
+</html>

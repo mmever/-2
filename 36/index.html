@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 36</title>
+</head>
+<body>
+    <script>
+        const baseNumber = 10;
+        const arrayNumber = Array.from({ length: baseNumber }, (_, index) => index + 1); // Создание массива от 1 до 10
+
+        // Цикл for
+        {
+            let sum = 0;
+            for (let i = 0; i < arrayNumber.length; i++) {
+                sum += arrayNumber[i] ** 2;
+            }
+            console.log('Цикл for:', sum);
+        }
+
+        // Цикл for of
+        {
+            let sum = 0;
+            for (const num of arrayNumber) {
+                sum += num ** 2;
+            }
+            console.log('Цикл for of:', sum);
+        }
+
+        // Метод forEach
+        {
+            let sum = 0;
+            arrayNumber.forEach((item) => {
+                sum += item ** 2;
+            });
+            console.log('Метод forEach:', sum);
+        }
+
+        // Метод reduce
+        {
+            const sum = arrayNumber.reduce((acc, curr) => acc + curr ** 2, 0);
+            console.log('Метод reduce:', sum);
+        }
+    </script>
+</body>
+</html>

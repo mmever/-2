@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 37.1</title>
+</head>
+<body>
+    <script>
+        function funcDeclaration(name) {
+            return `Привет ${name}! (function declaration)`;
+        }
+
+        const funcExpression = function (name) {
+            return `Привет ${name}! (function expression)`;
+        };
+
+        const arrowFunc1 = (name) => `Привет ${name}! (arrow function - variation 1)`;
+
+        const arrowFunc2 = name => `Привет ${name}! (arrow function - variation 2)`;
+
+        console.log(funcDeclaration('Alex'));
+        console.log(funcExpression('Alex'));
+        console.log(arrowFunc1('Alex'));
+        console.log(arrowFunc2('Alex'));
+    </script>
+</body>
+</html>

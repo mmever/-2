@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 42</title>
+</head>
+<body>
+    <script>
+        const listUsers = [
+            {
+                firstName: 'Alex',
+                birthday: '2000-10-15',
+                isAdult: true,
+            },
+            {
+                firstName: 'Ivan',
+                birthday: '2005-02-15',
+                isAdult: false,
+            },
+            {
+                firstName: 'Yana',
+                birthday: '1990-04-12',
+                isAdult: true,
+            },
+        ];
+
+        const objectItem = listUsers[0]; // Сохраняем первый элемент массива в переменную objectItem
+
+        function changeObjectMutate(object) {
+            object.firstName = 'Эдуард'; // Мутируем переданный объект
+            return object; // Возвращаем измененный объект
+        }
+
+        function changeObjectImmutable(object) {
+            const newObj = { ...object, firstName: 'Эдуард' }; // Создаем копию объекта с измененным свойством
+            return newObj; // Возвращаем новый объект
+        }
+
+        console.log(changeObjectMutate(objectItem)); // Мутируем объект и выводим его
+        // console.log(changeObjectImmutable(objectItem)); // Создаем новый объект и выводим его
+
+        console.log(objectItem); // Выводим первоначальный объект
+        console.log(listUsers); // Выводим массив listUsers
+    </script>
+</body>
+</html>
